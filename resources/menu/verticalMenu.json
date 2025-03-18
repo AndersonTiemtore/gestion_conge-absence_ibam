@@ -1,0 +1,36 @@
+{
+    "menu": [
+
+        {
+            "icon": "menu-icon tf-icons ti ti-smart-home",
+            "url": "dashboard",
+            "name": "Tableau de bord",
+            "slug": "dashboard"
+        },
+       
+            {
+                "icon": "menu-icon tf-icons ti ti-users",
+                "url": "employes",
+                "name": "Employés/Responsables",
+                "slug": "employes",
+                "visibilite": "grh"
+            },
+            {
+                "icon": "menu-icon tf-icons ti ti-building",
+                "url": "services",
+                "name": "Services",
+                "slug": "services",
+                "visibilite": "grh"
+            },
+            {
+                "icon": "menu-icon tf-icons ti ti-briefcase",
+                "url": "fonctions",
+                "name": "Fonctions",
+                "slug": "fonctions",
+                "visibilite": "grh"
+            }
+        
+
+        
+    ]
+}
