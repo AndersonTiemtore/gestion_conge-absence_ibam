@@ -8,9 +8,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/accueil', function () {
+    return view('welcome');
+});
 
 
 Route::middleware('guest')->group(function () {
@@ -34,18 +34,18 @@ Route::post('changement-mot-de-passe', [AuthentificationController::class, 'chan
 
 
 Route::middleware(['auth'])->group(function () {
-        Route::post('deconnexion', [AuthentificationController::class, 'deconnexion'])->name('logout');
-        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-        Route::get('profile', ProfileController::class)->name('profile');
-        // Route::get('parametres', ParametreController::class)->name('parametres');
+    Route::post('deconnexion', [AuthentificationController::class, 'deconnexion'])->name('logout');
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('profile', ProfileController::class)->name('profile');
+    // Route::get('parametres', ParametreController::class)->name('parametres');
 
-        Route::get('employes', EmployeController::class)->name('employes');
-        // Route::get('responsables', ResponsableController::class)->name('responsables');
-        Route::get('services', ServiceController::class)->name('services');
-        Route::get('fonctions', FonctionController::class)->name('fonctions');
+    Route::get('employes', EmployeController::class)->name('employes');
+    // Route::get('responsables', ResponsableController::class)->name('responsables');
+    Route::get('services', ServiceController::class)->name('services');
+    Route::get('fonctions', FonctionController::class)->name('fonctions');
 
-        Route::get('demande-conge/accepter/{demande}', 'App\Http\Controllers\DemandeValidationController@accepter')->name('demande.accepter');
-        Route::get('demande-conge/refuser/{demande}', 'App\Http\Controllers\DemandeValidationController@refuser')->name('demande.refuser');
-    });
+    Route::get('demande-conge/accepter/{demande}', 'App\Http\Controllers\DemandeValidationController@accepter')->name('demande.accepter');
+    Route::get('demande-conge/refuser/{demande}', 'App\Http\Controllers\DemandeValidationController@refuser')->name('demande.refuser');
+});
 
-    Route::post('/notifications/read/{id}', 'App\Http\Controllers\NotificationController@markAsRead')->name('notifications.read');
+Route::post('/notifications/read/{id}', 'App\Http\Controllers\NotificationController@markAsRead')->name('notifications.read');
