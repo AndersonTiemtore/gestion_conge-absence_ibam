@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /media/anderson-tiemtore/D/Projet/Laravel/conge-school-project-second/tests/Selenium/.venv
+setenv VIRTUAL_ENV /media/anderson-tiemtore/D/Projet/Laravel/conge-school/tests/Selenium/.venv
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
